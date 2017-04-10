@@ -1,0 +1,35 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`calendar-component`
+A Web Component wrapper for FullCalendar library that uses Polymer version 2.0 and ES6.
+
+@demo demo/index.html
+-->
+
+<dom-module id="calendar-component">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2> Calendar Implementation goes here -  [[prop1]]</h2>
+  </template>
+
+  <script>
+    class CalendarElement extends Polymer.Element {
+      static get is() { return 'calendar-component'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'sample property value'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(CalendarElement.is, CalendarElement);
+  </script>
+</dom-module>
